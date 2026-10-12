@@ -1,0 +1,14 @@
+.venv/
+.wewrite/
+integrations/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.env.*
+!.env.example
+.DS_Store
+build/
+dist/
+*.log
+.agents/

@@ -1,0 +1,17 @@
+beautifulsoup4==4.15.0
+certifi==2026.7.22
+chardet==7.6.0
+charset-normalizer==3.5.2
+cssutils==2.15.0
+encutils==1.0.0
+idna==3.20
+Markdown==3.11
+more-itertools==11.1.0
+pillow==12.3.0
+Pygments==2.21.0
+PyYAML==6.0.3
+requests==2.34.2
+soupsieve==3.0.3
+typing_extensions==4.16.0
+urllib3==2.8.0
+wewrite @ git+https://github.com/imraywang/wewrite.git@de69e06c2596a0f3e2b0eb3d6229f201d7559584
