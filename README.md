@@ -1,5 +1,7 @@
 # 公众号 AI 科普写作 skill
 
+[查看落地页与真实文章案例](https://darkhummingbird.github.io/wechat-ai-writer-skill/)
+
 面向已了解 AI、希望深入学习的读者。用户给定主题或标题后，完成原始资料核查、中文科普正文、独立来源说明与封面方案。使用 WeWrite 作为本地任务与编辑记录底座；写作与语义核查由运行 skill 的助手执行。
 
 ## 安装与使用
@@ -35,10 +37,14 @@ bin/wewrite diagnose --json
 
 ## 文件与隐私
 
-`skills/` 是写作规则，`scripts/` 是安装与本地适配，`bin/wewrite` 是统一入口，`defaults/` 是不含私人内容的初始规则。`.wewrite/` 是运行时资料、文章、用户改稿及配置；`.venv/` 是安装环境，两者均被忽略。发布仓库不包含下载的上游仓库、历史文章、测试输出、凭证或本机绝对路径。
+`skills/` 是写作规则，`scripts/` 是安装与本地适配，`bin/wewrite` 是统一入口，`defaults/` 是不含私人内容的初始规则。`.wewrite/` 是运行时资料、文章、用户改稿及配置；`.venv/` 是安装环境，两者均被忽略。除 `docs/` 中获授权公开的文章案例与核查/封面说明外，发布仓库不包含下载的上游仓库、私人历史文章、测试输出、凭证或本机绝对路径。
 
 ## 依赖与许可
 
 本项目 MIT，见 [LICENSE](LICENSE)。WeWrite 固定为 4.2.1 / `de69e06c2596a0f3e2b0eb3d6229f201d7559584`，独立安装，不分发其源码；MIT 归属原文见 [licenses/WeWrite-MIT.txt](licenses/WeWrite-MIT.txt)。其他 Python 依赖及间接依赖固定在 requirements.txt，各自保留上游许可。
 
 AIWriteX 仅作为通用设计参考，TrendRadar 已排除；两者均不作为依赖，不包含其代码或提示词。详见 [来源与取舍](skills/wechat-ai-science/references/provenance.md)。
+
+## 网站部署
+
+`docs/` 是独立的静态落地页，不改变 skill 安装与运行。在 GitHub Settings → Pages 选择 Deploy from a branch，使用 `main` 的 `/docs` 目录；`.nojekyll` 直接发布静态文件。资源使用相对路径，适配仓库子路径。更新网站后推送到 main，GitHub Pages 自动部署。中文标题字体为 Noto Serif SC 子集，SIL OFL 许可见 `docs/assets/FONT-LICENSE.txt`。
